@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9340D2ED-F9D2-4D04-A550-418204829518}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CryptographyAPITestsClient</RootNamespace>
+    <AssemblyName>CryptographyAPITestsClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AES\AES.csproj">
+      <Project>{998653c2-3f48-439e-a2d3-7577a229ee58}</Project>
+      <Name>AES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AsymmetricTests\AsymmetricTests.csproj">
+      <Project>{11832a14-9169-45d6-ab6f-8bee019bcb14}</Project>
+      <Name>AsymmetricTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CryptographicRandomNumbers\CryptographicRandomNumbers.csproj">
+      <Project>{a52b9c8a-ce26-4379-85ec-5adbde535cce}</Project>
+      <Name>CryptographicRandomNumbers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DES\DES.csproj">
+      <Project>{f0202ae0-cf1d-497f-81f7-f5d0a42a8d8d}</Project>
+      <Name>DES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DigitalSignature\DigitalSignature.csproj">
+      <Project>{38207ccb-5125-444d-8aaf-530e5d01003e}</Project>
+      <Name>DigitalSignature</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HashingTests\HashingTests.csproj">
+      <Project>{6fc2e28d-507b-47b9-b61e-837db8027d07}</Project>
+      <Name>HashingTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HashPasswords\HashPasswords.csproj">
+      <Project>{b6e74954-d2f1-4767-85db-1ae66df38b96}</Project>
+      <Name>HashPasswords</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HMAC\HMAC.csproj">
+      <Project>{055ac13f-515c-492b-aa73-68a81175f727}</Project>
+      <Name>HMAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HybridWithIntegrityAndSignatures\HybridWithIntegrityAndSignatures.csproj">
+      <Project>{9e8e8e53-54aa-4623-949a-af357a006061}</Project>
+      <Name>HybridWithIntegrityAndSignatures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HybridWithIntegrityCheck\HybridWithIntegrityCheck.csproj">
+      <Project>{2994db28-270c-4431-ba83-981541242ced}</Project>
+      <Name>HybridWithIntegrityCheck</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hybrid\Hybrid.csproj">
+      <Project>{79dd29e9-e70d-4154-b2a5-5f230b1ea39c}</Project>
+      <Name>Hybrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PBKDF\PBKDF.csproj">
+      <Project>{074d7358-684c-4409-8f8e-58cacabeede3}</Project>
+      <Name>PBKDF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RSA\RSA.csproj">
+      <Project>{35e92ef3-ce56-4ce7-97e6-8023947e21ba}</Project>
+      <Name>RSA</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SymmetricTests\SymmetricTests.csproj">
+      <Project>{1296e612-c6e9-4770-9483-4f0cb2cfb4f8}</Project>
+      <Name>SymmetricTests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TripleDES\TripleDES.csproj">
+      <Project>{820ff592-b89e-4683-8a57-5a13f9b9a2ef}</Project>
+      <Name>TripleDES</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
